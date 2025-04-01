@@ -5,14 +5,14 @@ services:
     build:
       context: .
       args:
-        - NODE_ENV=development
+        - NODE_ENV=production
     container_name: excalidraw
     restart: on-failure
     stdin_open: true
     healthcheck:
       disable: true
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
     volumes:
       - ./:/opt/node_app/app:delegated
       - ./package.json:/opt/node_app/package.json
